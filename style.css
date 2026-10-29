@@ -1,0 +1,50 @@
+:root{--em:#0b4d3f;--jade:#12805f;--mid:#06231f;--pearl:#f5f1e6;--cy:#6fe0d2;--sap:#2a5fa8;--gold:#d9b45a;--ch:450px;--gap:14px}
+*{box-sizing:border-box}
+html{overflow-anchor:none;-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:var(--pearl);font:400 16px/1.7 "Noto Sans Arabic",Tahoma,"Segoe UI",sans-serif;
+background:radial-gradient(120% 60% at 50% 0,#0f6b55 0,transparent 60%),linear-gradient(#06231f,#041a2e 70%);background-attachment:fixed;
+padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+body::before{content:"";position:fixed;inset:0;opacity:.06;pointer-events:none;
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 4l6 14 14-6-6 14 14 6-14 6 6 14-14-6-6 14-6-14-14 6 6-14L2 32l14-6-6-14 14 6z' fill='none' stroke='%23fff' stroke-width='1'/%3E%3C/svg%3E")}
+.top{text-align:center;padding:28px 14px 14px;position:relative}
+.brand{font:700 clamp(2rem,8vw,3.4rem)/1.2 "Noto Naskh Arabic",serif;margin:0;color:var(--pearl);text-shadow:0 0 28px rgba(111,224,210,.45)}
+.brand small{display:block;font:600 .8rem/1 sans-serif;letter-spacing:.35em;color:var(--gold);margin-top:6px}
+.tag{font:500 clamp(1.05rem,4vw,1.4rem) "Noto Naskh Arabic",serif;margin:.4em 0 0;color:var(--cy)}
+.en{margin:.2em 0 0;opacity:.75;font-size:.85rem}
+.bar{margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+button{font:inherit;cursor:pointer;color:var(--pearl);background:rgba(255,255,255,.08);border:1px solid rgba(111,224,210,.4);border-radius:12px;padding:8px 14px;min-height:44px;touch-action:manipulation}
+button:hover{background:rgba(111,224,210,.18)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.dock{position:fixed;z-index:20;top:calc(10px + env(safe-area-inset-top));inset-inline-end:calc(10px + env(safe-area-inset-right));display:flex;flex-direction:column;align-items:flex-end;gap:8px;transition:transform .25s ease,opacity .25s}
+.dock.hide{transform:translateY(-160%);opacity:0}
+#sbtn{width:48px;height:48px;padding:0;border-radius:50%;display:grid;place-items:center;background:rgba(6,35,31,.85);backdrop-filter:blur(8px)}
+#sform{width:min(92vw,430px);background:rgba(6,35,31,.93);backdrop-filter:blur(12px);border:1px solid var(--cy);border-radius:16px;padding:12px;display:flex;flex-wrap:wrap;gap:8px}
+#sform[hidden]{display:none}
+#q{flex:1 1 150px;min-width:0;min-height:44px;font:inherit;font-size:16px;padding:6px 12px;border-radius:12px;border:1px solid var(--cy);background:#0a2f33;color:var(--pearl);unicode-bidi:plaintext}
+#msg{flex-basis:100%;margin:0;font-size:.9rem;overflow-wrap:anywhere}
+#msg.err{color:#ffb3a7}#res{flex-basis:100%;margin:0;padding:0;list-style:none;display:grid;gap:6px}
+#res button{width:100%;text-align:start}
+#feed{position:relative;margin:0 auto;width:min(100% - 20px,1500px)}
+#snt{height:1px}
+.card{position:absolute;height:var(--ch);contain:layout paint style;display:flex;flex-direction:column;gap:6px;padding:10px;border-radius:20px;overflow:hidden;
+background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(245,241,230,.22);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.card.hl{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold),0 0 30px rgba(111,224,210,.6)}
+.card.hl::before{content:"✦ نتيجة البحث";position:absolute;z-index:2;top:16px;inset-inline-start:16px;background:var(--gold);color:#241a00;font-size:.8rem;font-weight:600;padding:1px 10px;border-radius:99px}
+.art{flex:none;height:168px;border-radius:14px;overflow:hidden;background:var(--em)}
+.art svg{display:block;width:100%;height:100%}
+.nm{margin:0;font:700 1.3rem/1.4 "Noto Naskh Arabic",serif;color:var(--cy);overflow-wrap:anywhere}
+.ds{margin:0;font-size:.92rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ds[lang=en]{font-family:system-ui,sans-serif}
+.idb,.un{background:rgba(0,0,0,.25);border-radius:10px;padding:2px 10px;max-height:3.6em;overflow-y:auto;overflow-wrap:anywhere;word-break:break-all;font-size:.85rem;line-height:1.5}
+.idb span{color:var(--gold);margin-inline-end:6px}
+.idb b{unicode-bidi:isolate;direction:ltr;display:inline;font-variant-numeric:tabular-nums}
+.un{direction:ltr;text-align:left;font-family:ui-monospace,monospace;color:var(--pearl);margin-top:auto}
+.ac{display:flex;gap:6px}.ac button{flex:1;font-size:.85rem;padding:4px 6px}
+.ac .tr[aria-pressed=true]{border-color:var(--gold);background:rgba(217,180,90,.2)}
+dialog{max-width:min(92vw,560px);background:#082b2b;color:var(--pearl);border:1px solid var(--cy);border-radius:18px}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+.ns{text-align:center}
+.paused *{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.rm *{transition:none!important;animation:none!important}
+@media (max-width:420px){:root{--ch:440px}}

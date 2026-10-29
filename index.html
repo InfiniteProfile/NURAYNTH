@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>نورَينث — عالمٌ من النور</title>
+<meta name="description" content="عالم من النور، حدائق لا تنتهي — تصفّح لا نهائي مستوحى من أوصاف الجنة.">
+<meta name="theme-color" content="#06231f">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Sans+Arabic:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1 class="brand">نورَينث <small dir="ltr">NŪRAYNTH</small></h1>
+  <p class="tag">عَالَمٌ مِنَ النُّورِ، حَدَائِقُ لَا تَنْتَهِي</p>
+  <p class="en" lang="en" dir="ltr">A universe of light, gardens without end.</p>
+  <div class="bar">
+    <button id="info" type="button">عن المشروع</button>
+    <button id="home" type="button" hidden>العودة إلى البداية</button>
+  </div>
+</header>
+<div class="dock" id="dock">
+  <button id="sbtn" type="button" aria-label="بحث" aria-expanded="false" aria-controls="sform"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+  <form id="sform" hidden role="search" autocomplete="off">
+    <input id="q" type="text" dir="auto" inputmode="text" enterkeyhint="search" aria-label="ابحث برقم المعرّف أو اسم المستخدم" placeholder="رقم المعرّف أو اسم المستخدم">
+    <button type="submit">بحث</button>
+    <button type="button" id="sclose" aria-label="إغلاق البحث">✕</button>
+    <p id="msg" role="status" aria-live="polite"></p>
+    <ul id="res"></ul>
+  </form>
+</div>
+<main id="feed" role="feed" aria-label="ملفات شخصية لا نهائية"></main>
+<div id="snt" aria-hidden="true"></div>
+<noscript><p class="ns">يحتاج هذا الموقع إلى تفعيل جافاسكربت.</p></noscript>
+<dialog id="dlg" aria-labelledby="dt">
+  <h2 id="dt">عن نورَينث</h2>
+  <p>الملفات هنا <b>تُولَّد خوارزميًا</b> في متصفحك من رقم المعرّف الكامل، وليست أشخاصًا حقيقيين ولا من قاعدة بيانات خارجية. الرقم نفسه يعطي دائمًا الملف نفسه.</p>
+  <p>الصور تفسيرات فنية خيالية مستوحاة من وصف القرآن للجنة؛ ليست صورًا موثّقة للجنة ولا لأهلها. ما لم يرد فيه نصٌّ صحيح فهو خيال فني لا حقيقة دينية.</p>
+  <p>مرجع الإلهام: «جَنَّاتٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ» (البقرة: ٢٥). لم تُضمَّن ترجمة إنجليزية للآية حتى لا تُنسب إلى مترجم دون توثيق؛ راجع ترجمة موثوقة.</p>
+  <p>الحدود الفعلية: لا سقف للأرقام في التطبيق، لكن الذاكرة وسرعة المتصفح تحدّان المدخلات الضخمة جدًا. النصوص الإنجليزية في البطاقات صياغات قالبية من المشروع لم تُراجَع لغويًا.</p>
+  <label><input type="checkbox" id="rm"> تقليل الحركة</label>
+  <form method="dialog"><button>إغلاق</button></form>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
